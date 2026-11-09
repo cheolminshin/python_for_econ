@@ -1,0 +1,8 @@
+# Actual execution environment: Python 3.12.14
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.2.3
+matplotlib==3.10.8
+openpyxl==3.1.5
+pillow==13.0.0
+ipykernel==7.4.0

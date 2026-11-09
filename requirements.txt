@@ -1,0 +1,8 @@
+# CPU notebooks; install CuPy separately for Section 11.
+numpy
+scipy
+pandas
+matplotlib
+openpyxl
+pillow
+ipykernel
