@@ -1,0 +1,7 @@
+{
+  "method": "artifact_tool workbook import; compare date-normalized values to original CSV",
+  "rows": 42,
+  "columns": 18,
+  "mismatches": [],
+  "xlsx_modified": false
+}

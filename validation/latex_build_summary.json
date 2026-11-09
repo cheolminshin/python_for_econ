@@ -1,0 +1,18 @@
+{
+  "pages": 257,
+  "printed_last_page": 256,
+  "included_graphics": 23,
+  "missing_graphics": [],
+  "all_links": 997,
+  "invalid_internal_links": [],
+  "overfull_boxes": 0,
+  "underfull_boxes": 29,
+  "undefined_references": false,
+  "missing_characters": 0,
+  "font_substitution_warning": true,
+  "duplicate_destination_warning": false,
+  "title_text": "상경계를위한Python 입문\n처음사용하는사람도따라할수있는실습안내서\n이강의록의사용방법\n각Section의설명과실습절차를위에서부터차례대로따라하세요. 정상실행예제는출력\n과비교하고, 오류시연예제는지정한결과를확인한뒤다음셀로넘어갑니다. 실행하지\n말라고표시한무한반복예제와설명용템플릿은Markdown 셀로보관합니다. 새커널에\n서는필요한import와함수정의를먼저실행합니다.\n작성자\n신철민\n소속\n서울대학교수리과학부석박사통합과정\n작성일\nNovember 10, 2026\n문서버전\nVersion 1.0",
+  "last_footer_text": "않습니다.\n• Monte Carlo 표준오차와시간이산화오차는서로다른오차입니다.\n• GPU 실행시간은준비실행과동기화를포함한올바른방법으로측정합니다.\n• 큰계산에서는모든시간의경로를저장하지않고현재상태와누적값만유지합니다.\n• 가격은해석적결과, 표준오차와시간격자변화로검산합니다.\n256 / 256\n",
+  "build_engine": "XeLaTeX + latexmk",
+  "gpu_executed": false
+}

@@ -1,0 +1,71 @@
+{
+  "initial_price": 99.06458479717818,
+  "redemption_time": 2.5,
+  "final_pnl": 0.2712776599051807,
+  "max_self_financing_residual": 0.0,
+  "knock_in_occurred": true,
+  "settings": {
+    "reference": 100.0,
+    "notional": 100.0,
+    "maturity": 3.0,
+    "rate": 0.03,
+    "dividend_yield": 0.0,
+    "volatility": 0.25,
+    "coupon_rate": 0.08,
+    "knock_in_level": 60.0,
+    "observation_days": [
+      126,
+      252,
+      378,
+      504,
+      630,
+      756
+    ],
+    "autocall_levels": [
+      90.0,
+      90.0,
+      85.0,
+      85.0,
+      80.0,
+      80.0
+    ],
+    "days_per_year": 252,
+    "s_max": 250.0,
+    "n_space": 1000,
+    "substeps_per_day": 4,
+    "path_seed": 24,
+    "physical_drift": 0.01,
+    "curve_day": 121
+  },
+  "curve_time": 0.4801587301587302,
+  "grid_checks": [
+    {
+      "n_space": 500,
+      "substeps_per_day": 2,
+      "price": 99.08986245605502
+    },
+    {
+      "n_space": 1000,
+      "substeps_per_day": 2,
+      "price": 99.06858463929417
+    },
+    {
+      "n_space": 1000,
+      "substeps_per_day": 4,
+      "price": 99.06458479717818
+    }
+  ],
+  "scope": "single-asset educational example; daily KI; no full convergence proof",
+  "one_asset_mc_check": {
+    "paths": 50000,
+    "steps": 3024,
+    "seed": 2026,
+    "monitoring": "daily close only",
+    "price": 99.01373714392643,
+    "standard_error": 0.06869328067179192,
+    "fdm_price": 99.06458479717818,
+    "difference": 0.05084765325175056,
+    "difference_in_se": 0.7402129109933534,
+    "status": "PASS"
+  }
+}

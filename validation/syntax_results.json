@@ -1,0 +1,1640 @@
+{
+  "files": [
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "code_blocks": 14,
+      "functions": [
+        "bond_mc_cpu",
+        "bond_mc_gpu",
+        "bond_exact"
+      ]
+    },
+    {
+      "file": "python_economics_handout_main_.tex",
+      "code_blocks": 0,
+      "functions": []
+    },
+    {
+      "file": "section01_python_setup.tex",
+      "code_blocks": 3,
+      "functions": []
+    },
+    {
+      "file": "section02_data_types.tex",
+      "code_blocks": 38,
+      "functions": []
+    },
+    {
+      "file": "section03_data_io.tex",
+      "code_blocks": 34,
+      "functions": []
+    },
+    {
+      "file": "section04_plotting.tex",
+      "code_blocks": 19,
+      "functions": []
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "code_blocks": 45,
+      "functions": [
+        "discount_factor",
+        "forward_price",
+        "option_payoff",
+        "square_function",
+        "black_scholes_call_price"
+      ]
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "code_blocks": 35,
+      "functions": [
+        "crr_parameters",
+        "option_payoff",
+        "binomial_option_price",
+        "european_binomial_price_terminal",
+        "american_put_tree_details",
+        "cev_tree_price",
+        "heston_branch_shocks",
+        "heston_children",
+        "heston_tree_price"
+      ]
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "code_blocks": 21,
+      "functions": [
+        "simulate_gbm_paths",
+        "option_payoff",
+        "simulate_gbm_terminal",
+        "monte_carlo_european_option",
+        "monte_carlo_asian_call",
+        "monte_carlo_cev_option",
+        "monte_carlo_heston_option"
+      ]
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "code_blocks": 16,
+      "functions": [
+        "option_payoff_grid",
+        "european_boundary_values",
+        "black_scholes_pde_price",
+        "projected_american_pde_price",
+        "local_volatility_pde_price",
+        "cev_local_volatility",
+        "heston_spatial_operator"
+      ]
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "code_blocks": 19,
+      "functions": [
+        "black_scholes_price",
+        "black_scholes_greeks",
+        "finite_difference_greeks",
+        "pde_grid_delta_gamma",
+        "black_scholes_call_delta",
+        "delta_hedge_short_call",
+        "cev_pde_solution",
+        "heston_mc_price_engine"
+      ]
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "code_blocks": 10,
+      "functions": [
+        "price_stepdown_els",
+        "copy_market",
+        "stepdown_els_greeks",
+        "rebalance_delta_hedge"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 58,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 157,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CuPy 설치와 GPU 배열 연산 확인}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 206,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 231,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CPU 배열을 GPU로 옮기고 다시 가져오기}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 314,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 359,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={모형 파라미터와 계산규모 설정}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 371,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={NumPy를 이용한 CPU Monte Carlo}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 419,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CPU 가격과 표준오차 출력}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 436,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CuPy를 이용한 GPU Monte Carlo}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 497,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={GPU 가격과 표준오차 출력}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 516,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={OU 채권의 해석적 가격}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 530,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CPU와 GPU 결과의 오차 확인}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 568,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={난수 생성기의 올바른 위치}"
+    },
+    {
+      "file": "cuda_monte_carlo_chapter.tex",
+      "line": 588,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CPU와 GPU의 전체 실행시간 비교}"
+    },
+    {
+      "file": "section01_python_setup.tex",
+      "line": 476,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Python 실행 환경 확인}"
+    },
+    {
+      "file": "section01_python_setup.tex",
+      "line": 503,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={가격과 판매량으로 매출 계산하기}"
+    },
+    {
+      "file": "section01_python_setup.tex",
+      "line": 586,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 65,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={대표적인 Python 자료형 확인하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 127,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={값에 따라 암묵적으로 정해지는 자료형}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 148,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={같은 이름에 다른 자료형을 다시 연결하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 204,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={타입 주석이 값을 자동 변환하지 않는 예}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 221,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={잘못된 자료형으로 계산할 때 발생하는 오류}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 235,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 277,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={정수형의 선언과 연산}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 307,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 338,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Python의 실수형}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 367,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 389,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 400,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={정수와 실수를 함께 계산한 경우}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 497,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={실수 계산 결과를 정확한 등호로 비교할 때의 문제}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 536,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={문자열 만들기와 출력하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 558,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={f-string으로 설명 문장 만들기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 579,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={문자열을 숫자로 착각한 경우}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 594,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={문자열을 float으로 변환하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 617,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 625,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 636,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 652,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={만기 목록을 튜플로 저장하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 681,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={튜플 원소를 변경할 수 없는 예}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 693,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 700,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={튜플 언패킹}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 711,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 730,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={시장자료를 사전으로 저장하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 756,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={사전 값 수정과 항목 추가}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 775,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={존재하지 않는 키를 조회한 경우}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 787,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 794,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={get으로 기본값 지정하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 823,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={비교 연산으로 부울값 만들기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 846,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={부울 조건 결합하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 865,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={bool(\"False\")가 True가 되는 이유}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 884,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 909,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={옵션 가치평가 입력값의 자료형 명시하기}"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 1015,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 1042,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section02_data_types.tex",
+      "line": 1061,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 180,
+      "status": "Jupyter magic",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 187,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 패키지 불러오기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 213,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={데이터 파일의 상대경로 지정하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 240,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 295,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 308,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={DataFrame의 기본 구조 확인하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 348,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={열별 자료형을 지정하여 CSV 읽기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 381,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={읽은 뒤 실제 자료형 확인하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 387,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 425,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={퍼센트 문자열을 실수 비율로 변환하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 458,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 469,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 485,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={결측값과 중복 계약 확인하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 510,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={옵션 호가의 기본 제약조건 검사하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 551,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={콜옵션 선택과 새 변수 계산}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 597,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 620,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={index=False를 생략했을 때의 문제}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 639,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 651,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={낮은 출력 정밀도로 금리가 훼손되는 예}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 684,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={저장한 결과 파일 재검증하기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 711,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 741,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 749,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 757,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={UTF-8과 CP949를 순서대로 시도하는 예}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 780,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 795,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Excel의 특정 시트를 DataFrame으로 읽기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 810,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 833,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 846,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 859,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={여러 시트를 가진 Excel 파일 만들기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 911,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={DataFrame 일부를 JSON으로 저장하고 읽기}"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 940,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 947,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section03_data_io.tex",
+      "line": 1019,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 162,
+      "status": "Jupyter magic",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 169,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 패키지 불러오기}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 200,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={두 실습자료 읽기}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 255,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={그래프 작성 전 기본 확인}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 282,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={가장 기본적인 Matplotlib 구조}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 331,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={날짜별 합성 주가의 선 그래프}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 378,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={유럽형 옵션의 만기 payoff}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 419,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 435,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={행사가격에 따른 콜옵션 mid price}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 503,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={moneyness에 따른 내재변동성 곡선}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 559,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={long format을 표면용 격자로 변환하기}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 619,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={volatility surface의 2차원 등고선 그림}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 662,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={3차원 implied volatility surface}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 725,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 755,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={두 변수 함수의 그래프를 만드는 기본 구조}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 780,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 789,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={volatility surface를 PNG로 저장하기}"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 810,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section04_plotting.tex",
+      "line": 960,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 79,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 104,
+      "status": "Jupyter magic",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 111,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 라이브러리 불러오기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 143,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={리스트와 NumPy 배열의 곱셈 비교}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 175,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={1차원과 2차원 배열 만들기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 211,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={가치평가용 격자와 초기 배열 만들기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 227,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={배열의 기본 속성 확인하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 266,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 279,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={배열의 원소, 행과 열 선택하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 318,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={view를 수정하면 원본도 바뀌는 예}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 337,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 356,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={할인계수와 옵션 payoff의 벡터화 계산}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 401,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={axis에 따른 평균 계산}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 444,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={불리언 마스크로 in-the-money 시나리오 선택하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 466,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={np.where로 디지털 옵션 payoff 만들기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 482,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 493,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={잘못된 배열 조건문}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 509,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={1차원 배열을 열벡터로 바꾸기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 529,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={여러 기초자산 가격과 행사가격의 payoff 격자}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 568,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={반복문과 벡터화 계산 비교}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 601,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={표준정규 난수 생성하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 623,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={벡터화된 몬테카를로 콜옵션 가격}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 678,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={선형방정식으로 복제 포트폴리오 구하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 719,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={할인계수 함수 만들기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 747,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={함수 설명 확인하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 757,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 780,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={기본 매개변수를 가진 선도가격 함수}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 818,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={콜과 풋 payoff를 계산하는 사용자 정의 함수}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 870,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={일반 함수와 람다 함수 비교}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 884,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={할인된 연속 현금흐름 적분에 사용할 람다 함수}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 922,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={표준정규분포의 대표 함수}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 947,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={스칼라와 배열을 받는 Black--Scholes 콜옵션 함수}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 987,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes 함수 사용하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1036,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={연속 현금흐름의 현재가치 계수 적분}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1071,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={할인계수 곡선 보간하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1118,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes implied volatility 계산하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1187,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={옵션 종류에 따라 payoff 공식 선택하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1211,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={만기별 할인계수 출력하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1234,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={실수의 정확한 일치를 기다리는 잘못된 while문}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1245,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={고정된 반복횟수와 허용오차 사용하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1271,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={배리어 도달 시 break로 반복 중단하기}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1315,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={행사가격과 만기에 따른 옵션 가격 격자}"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1410,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1422,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section05_numpy_scipy_functions.tex",
+      "line": 1428,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 116,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 라이브러리 불러오기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 161,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 220,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={1기간의 기초자산 가격과 옵션 payoff}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 267,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={1기간 무차익 조건 확인하기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 319,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={위험중립확률로 1기간 콜옵션과 풋옵션 평가하기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 364,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={콜옵션의 복제비용과 위험중립가격 비교}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 397,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={1기간 put--call parity 검산}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 442,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CRR 계수를 계산하는 함수}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 487,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 566,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={2기간 만기주가와 콜 payoff 배열}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 607,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={2기간 backward induction}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 671,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={콜옵션과 풋옵션의 payoff 함수}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 692,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={일반적인 CRR 이항트리 가격함수}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 782,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={100기간 유럽형 옵션가격 계산}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 809,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={다기간 유럽형 가격의 parity 검산}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 863,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={유럽형 옵션의 terminal expectation 계산}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 916,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 968,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 974,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={100기간 풋옵션의 행사방식 비교}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1001,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={미국형 풋의 노드별 행사결정 기록하기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1073,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1102,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1141,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={단계 수별 유럽형 콜옵션 가격 계산}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1183,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={단계 수와 이항트리 가격의 그래프}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1228,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1250,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CSV의 각 계약에 CRR 가격 계산하기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1279,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1563,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CEV 모형의 비재결합 이항트리 가격함수}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1639,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CEV 이항트리 실행 예}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1662,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={$\\beta=1$에서 CRR 결과와 비교하기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1782,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={상관된 네 개의 이항충격 만들기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1853,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston 한 노드에서 네 자식노드 만들기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1901,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston 한 단계의 네 자식노드 확인하기}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 1930,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston 교육용 4분기 트리 가격함수}"
+    },
+    {
+      "file": "section06_binomial_option_pricing.tex",
+      "line": 2019,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston 6단계 교육용 트리 실행 예}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 121,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 라이브러리 불러오기}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 157,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 232,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Euler--Maruyama 주가경로를 저장하는 함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 296,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={20개의 주가경로 생성하기}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 324,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={생성한 주가경로 그리기}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 360,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={콜옵션과 풋옵션 payoff 함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 379,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={만기주가만 생성하는 메모리 절약형 함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 448,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={유럽형 옵션의 Monte Carlo 가격함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 505,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={유럽형 콜옵션의 Monte Carlo 가격 계산}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 553,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={같은 경로를 이용한 콜과 풋의 관계 확인}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 609,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={경로 수에 따른 가격과 standard error 비교}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 651,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={경로 수와 standard error의 관계 그리기}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 673,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={시간 단계 수에 따른 가격 비교}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 746,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={산술평균 아시안 콜옵션의 Monte Carlo 가격함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 812,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={산술평균 아시안 콜옵션 평가 예}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 850,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Monte Carlo 함수의 실행시간 측정}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 1029,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CEV 모형의 Euler--Maruyama Monte Carlo 가격함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 1096,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CEV 유럽형 콜옵션 평가 예}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 1165,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={상관계수 rho를 갖는 두 정규충격 만들기}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 1202,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston 모형의 projected Euler--Maruyama 가격함수}"
+    },
+    {
+      "file": "section07_monte_carlo_option_pricing.tex",
+      "line": 1287,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston 유럽형 콜옵션 평가 예}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 133,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 라이브러리 불러오기}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 164,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={가격격자와 시간격자 만들기}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 240,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes 공간계수 계산하기}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 269,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Explicit Euler의 내부격자 한 단계}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 384,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={격자 전체에서 만기 payoff 만들기}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 413,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={유럽형 옵션의 경계값 함수}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 472,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes PDE의 implicit Euler 가격함수}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 570,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={유럽형 콜옵션과 풋옵션 평가하기}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 615,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={현재시점 가격곡선과 만기 payoff 그리기}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 647,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={FDM 결과의 put--call parity 확인}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 691,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={격자별 FDM 가격과 해석해 오차}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 784,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={교육용 projected implicit American 가격함수}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 878,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={American put과 European put 비교}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 978,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={일반적인 local volatility PDE 가격함수}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 1078,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CEV local volatility를 이용한 유럽형 콜옵션}"
+    },
+    {
+      "file": "section08_pde_option_pricing.tex",
+      "line": 1171,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston PDE의 9-point 공간연산자}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 142,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 라이브러리 불러오기}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 157,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 251,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes 유럽형 옵션가격 함수}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 298,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes Greeks 함수}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 363,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={콜옵션 Greeks 계산 예}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 397,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={주가에 따른 Delta 계산}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 422,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={주가에 따른 Gamma 계산}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 486,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={중심차분으로 Greeks 계산하기}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 572,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={해석적 Greeks와 수치 Greeks 비교}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 670,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={PDE 가격격자에서 Delta와 Gamma 계산하기}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 756,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Black--Scholes call Delta 함수}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 768,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={한 경로에서 short call Delta hedge}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 825,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={한 개의 simulation 경로에서 Delta hedge 실행}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 863,
+      "status": "PASS",
+      "caption": "style=pythonstyle"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 943,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={포트폴리오 Greeks 합산 예}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 1021,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={가격과 전체 격자를 반환하는 CEV PDE 함수}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 1063,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={CEV 격자 Greeks와 변동성 민감도 계산}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 1148,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston Monte Carlo 가격엔진 wrapper}"
+    },
+    {
+      "file": "section09_option_greeks.tex",
+      "line": 1179,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={Heston Delta, Gamma와 초기변동성 Vega}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 225,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={이번 장에서 사용할 라이브러리 불러오기}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 234,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={교육용 ELS 상품조건과 시장입력}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 301,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={두 자산 step-down ELS Monte Carlo 가격함수}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 432,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={ELS 가격과 주요 진단통계 계산하기}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 472,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={상환시점별 위험중립확률}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 493,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={상환시점별 확률 막대그래프}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 576,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={시장입력 사전을 안전하게 복사하는 함수}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 589,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={ELS Delta, Gamma, Vega와 Cega 계산}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 668,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={ELS Greeks 계산 예시}"
+    },
+    {
+      "file": "section10_els_pricing_hedging.tex",
+      "line": 800,
+      "status": "PASS",
+      "caption": "style=pythonstyle,caption={한 기초자산의 Delta hedge 보유량 조정}"
+    }
+  ]
+}

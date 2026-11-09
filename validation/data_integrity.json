@@ -1,0 +1,20 @@
+[
+  {
+    "original": "european_option_market_data.xlsx",
+    "revised": "data/european_option_market_data.xlsx",
+    "sha256": "44d66094ff240bff06a5136e08ba458786074404d1ae1b4d25597a737fe73467",
+    "unchanged": true
+  },
+  {
+    "original": "european_option_market_data.csv",
+    "revised": "data/european_option_market_data.csv",
+    "sha256": "b878b369b11c43963d043d2d371fc0f6cc2be81f062f38f83810d396261e63e1",
+    "unchanged": true
+  },
+  {
+    "original": "synthetic_market_time_series.csv",
+    "revised": "data/synthetic_market_time_series.csv",
+    "sha256": "b204919e936c3fbb8a5bd2015eccbb6f21fad9fadcab9c5b7c2e5f76fdb5ffcf",
+    "unchanged": true
+  }
+]

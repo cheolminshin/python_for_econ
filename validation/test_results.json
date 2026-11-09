@@ -1,0 +1,377 @@
+{
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "gpu": "not executed"
+  },
+  "tests": [
+    {
+      "name": "CSV 행수·날짜·호가·결측 검증",
+      "status": "PASS",
+      "result": {
+        "quotes_shape": [
+          42,
+          18
+        ],
+        "timeseries_shape": [
+          252,
+          8
+        ],
+        "max_day_count_error": 1.506849311994074e-09
+      },
+      "elapsed_sec": 0.006625867999900947
+    },
+    {
+      "name": "정수/float 산술과 음수 floor division",
+      "status": "PASS",
+      "result": {
+        "division_type": "float",
+        "floor": -3,
+        "truncate": -2,
+        "sum_0_1": 1.0
+      },
+      "elapsed_sec": 1.2289000096643576e-05
+    },
+    {
+      "name": "할인계수 함수의 float 반환",
+      "status": "PASS",
+      "result": {
+        "type": "float",
+        "value": 0.0024787521766663585
+      },
+      "elapsed_sec": 1.8707999970501987e-05
+    },
+    {
+      "name": "BS Section5 스칼라가격",
+      "status": "PASS",
+      "result": 9.413403383853016,
+      "elapsed_sec": 0.00039191900009427627
+    },
+    {
+      "name": "CRR 유럽형 콜 100단계",
+      "status": "PASS",
+      "result": 10.430611662249113,
+      "elapsed_sec": 0.0004501470000377594
+    },
+    {
+      "name": "CRR 유럽형 풋 100단계",
+      "status": "PASS",
+      "result": 5.553554112321355,
+      "elapsed_sec": 0.0003895459999512241
+    },
+    {
+      "name": "CRR 미국형 풋 100단계",
+      "status": "PASS",
+      "result": 6.082354409142444,
+      "elapsed_sec": 0.0012834809999731078
+    },
+    {
+      "name": "직접 이항 기대값",
+      "status": "PASS",
+      "result": 10.430611662249083,
+      "elapsed_sec": 0.0004067519998898206
+    },
+    {
+      "name": "CRR 소수 steps 거절",
+      "status": "PASS",
+      "result": "TypeError",
+      "elapsed_sec": 8.542999921701266e-06
+    },
+    {
+      "name": "CRR bool steps 거절",
+      "status": "PASS",
+      "result": "TypeError",
+      "elapsed_sec": 6.2689998685527826e-06
+    },
+    {
+      "name": "직접 이항계산의 무차익 실패 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 3.112700005658553e-05
+    },
+    {
+      "name": "CEV beta=1 트리-CRR 일치",
+      "status": "PASS",
+      "result": 9.16993987153683,
+      "elapsed_sec": 0.00026884500016421953
+    },
+    {
+      "name": "CEV beta>1 교육범위 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 1.772599989635637e-05
+    },
+    {
+      "name": "Heston 4분기 트리",
+      "status": "PASS",
+      "result": 9.276775410975544,
+      "elapsed_sec": 0.022316304000014497
+    },
+    {
+      "name": "MC 유럽형 콜",
+      "status": "PASS",
+      "result": {
+        "price": 9.459294548289561,
+        "standard_error": 0.04474844542477424,
+        "lower": 9.371587595257004,
+        "upper": 9.547001501322118
+      },
+      "elapsed_sec": 0.32203731000004154
+    },
+    {
+      "name": "MC 경로 하나 생성 허용",
+      "status": "PASS",
+      "result": [
+        253,
+        1
+      ],
+      "elapsed_sec": 0.002388122999946063
+    },
+    {
+      "name": "MC 경로 하나로 표준오차 계산 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 2.841300010913983e-05
+    },
+    {
+      "name": "MC 소수 단계수 거절",
+      "status": "PASS",
+      "result": "TypeError",
+      "elapsed_sec": 8.113000149023719e-06
+    },
+    {
+      "name": "MC Asian 콜",
+      "status": "PASS",
+      "result": [
+        5.305443996661801,
+        0.02449072211607171
+      ],
+      "elapsed_sec": 0.3126377579999371
+    },
+    {
+      "name": "Heston Euler MC",
+      "status": "PASS",
+      "result": [
+        9.278141442279999,
+        0.03678749163836459
+      ],
+      "elapsed_sec": 0.7067658479998045
+    },
+    {
+      "name": "FDM 콜 기본값",
+      "status": "PASS",
+      "result": 10.450487868411317,
+      "elapsed_sec": 0.014092253000171695
+    },
+    {
+      "name": "FDM 풋 기본값",
+      "status": "PASS",
+      "result": 5.573549218270483,
+      "elapsed_sec": 0.013196342999890476
+    },
+    {
+      "name": "Projected American 풋",
+      "status": "PASS",
+      "result": 6.088430260407369,
+      "elapsed_sec": 0.011882016000072326
+    },
+    {
+      "name": "FDM 부적절한 Smax 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 2.3796000050424482e-05
+    },
+    {
+      "name": "FDM 소수격자 거절",
+      "status": "PASS",
+      "result": "TypeError",
+      "elapsed_sec": 7.701999948039884e-06
+    },
+    {
+      "name": "Local vol FDM NaN 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 9.430199997950695e-05
+    },
+    {
+      "name": "Local vol FDM 상수 sigma 동등성",
+      "status": "PASS",
+      "result": 10.450487868411317,
+      "elapsed_sec": 0.3116784049998387
+    },
+    {
+      "name": "CEV 격자 Gamma",
+      "status": "PASS",
+      "result": {
+        "price": 10.451011461764791,
+        "delta": 0.6292199807449409,
+        "gamma": 0.018960956165750952
+      },
+      "elapsed_sec": 0.3071246440001687
+    },
+    {
+      "name": "BS 해석적/수치 Greeks 비교",
+      "status": "PASS",
+      "result": {
+        "analytic": {
+          "delta": 0.6368306511756191,
+          "gamma": 0.018762017345846895,
+          "vega": 37.52403469169379,
+          "theta": -6.414027546438197,
+          "rho": 53.232481545376345
+        },
+        "numerical": {
+          "delta": 0.636829791253426,
+          "gamma": 0.018761994380867005,
+          "vega": 37.52403438721075,
+          "theta": -6.414031273049581,
+          "rho": 53.23248077413467
+        }
+      },
+      "elapsed_sec": 0.0011309520000395423
+    },
+    {
+      "name": "zero bump 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 2.5267999944844632e-05
+    },
+    {
+      "name": "동일 원경로 hedge frequency",
+      "status": "PASS",
+      "result": {
+        "12": 0.9597977955763213,
+        "48": -0.3611798291379813,
+        "252": -0.6915152783626866,
+        "1008": -0.22767685230964219
+      },
+      "elapsed_sec": 0.2035856810000496
+    },
+    {
+      "name": "ELS 가격·만기상환확률·총확률",
+      "status": "PASS",
+      "result": {
+        "price": 96.0933921035579,
+        "standard_error": 0.11447699978843125,
+        "redemption_probabilities": [
+          0.6050666666666666,
+          0.09,
+          0.06693333333333333,
+          0.028133333333333333,
+          0.03236666666666667,
+          0.015966666666666667
+        ],
+        "payment_probabilities": [
+          0.6050666666666666,
+          0.09,
+          0.06693333333333333,
+          0.028133333333333333,
+          0.03236666666666667,
+          0.1775
+        ],
+        "maturity_probability": 0.1775,
+        "knock_in_probability": 0.16813333333333333,
+        "loss_probability": 0.14596666666666666,
+        "average_payment_time": 1.1626166666666666
+      },
+      "elapsed_sec": 0.3851828510000814
+    },
+    {
+      "name": "ELS Gamma 시드별 불안정성",
+      "status": "PASS",
+      "result": {
+        "2026": {
+          "price": 96.188849079459,
+          "delta_1": 0.21956764871801226,
+          "delta_2": 0.3841044061306249,
+          "gamma_1": -0.14451016759042545,
+          "gamma_2": -0.06408326604262982,
+          "vega_1": -36.01890117788713,
+          "vega_2": -53.52848859855541,
+          "cega": 3.960152542642348
+        },
+        "2027": {
+          "price": 95.75463729860824,
+          "delta_1": 0.21894273337949244,
+          "delta_2": 0.3200872965589667,
+          "gamma_1": 0.055584466472566874,
+          "gamma_2": 0.06394529081254063,
+          "vega_1": -35.768341970647555,
+          "vega_2": -48.1529787331084,
+          "cega": 2.669730138550719
+        },
+        "2028": {
+          "price": 96.03002797495078,
+          "delta_1": 0.21006985043801052,
+          "delta_2": 0.25217615327964893,
+          "gamma_1": 0.03246277433090938,
+          "gamma_2": 0.095287634070786,
+          "vega_1": -36.0947531472803,
+          "vega_2": -42.00478895255202,
+          "cega": 1.7153324221641952
+        }
+      },
+      "elapsed_sec": 4.387853031000077
+    },
+    {
+      "name": "ELS fractional n_paths 거절",
+      "status": "PASS",
+      "result": "TypeError",
+      "elapsed_sec": 1.5753000070617418e-05
+    },
+    {
+      "name": "ELS zero bump 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 2.773200003503007e-05
+    },
+    {
+      "name": "시장입력 복사와 실수형 bump",
+      "status": "PASS",
+      "result": [
+        100.5,
+        100.0
+      ],
+      "elapsed_sec": 1.7646000060267397e-05
+    },
+    {
+      "name": "OU CPU MC 및 해석식",
+      "status": "PASS",
+      "result": {
+        "cpu": [
+          0.9657683922811826,
+          6.926287895373736e-05
+        ],
+        "exact": 0.9658025185122118
+      },
+      "elapsed_sec": 0.03526036900007057
+    },
+    {
+      "name": "OU n_paths=1 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 1.3270000181364594e-05
+    },
+    {
+      "name": "OU kappa=0 거절",
+      "status": "PASS",
+      "result": "ValueError",
+      "elapsed_sec": 2.1181999954933417e-05
+    },
+    {
+      "name": "새 커널 공통 모듈 로딩",
+      "status": "PASS",
+      "result": {
+        "paths_shape": [
+          5,
+          1
+        ],
+        "fdm": 10.450487868411317
+      },
+      "elapsed_sec": 0.014050828999870646
+    }
+  ]
+}
